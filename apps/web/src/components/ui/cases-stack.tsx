@@ -62,6 +62,43 @@ const cases = [
       'Sistema de webhooks e APIs REST',
     ],
   },
+  {
+    id: 'fantazy',
+    company: 'Fantazy',
+    title: 'Template PHP customizado, integrações financeiras e segurança',
+    problem:
+      'Necessidade de monetização com assinaturas/boletos, Pix e entrega de mídia com controle de acesso, evitando pirataria de conteúdo.',
+    solution:
+      'Customização segura de template PHP com integrações Asaas (boletos/assinaturas), API de Pix, webhooks e validações. Implementação de proteção contra pirataria e entrega de mídia avançada com controle de acesso.',
+    results: [
+      { metric: 'Segurança', label: 'Proteção antipirataria' },
+      { metric: 'Integrações', label: 'Asaas, Pix, Webhooks' },
+    ],
+    links: {
+      website: 'https://fantazy.com.br',
+      case: '/projetos/fantazy',
+    },
+    showPerformance: false,
+  },
+  {
+    id: 'agenda-facil',
+    company: 'Agenda Fácil',
+    title:
+      'Sistema de agendamento full‑stack em Next.js 16 + Hono + PostgreSQL',
+    problem:
+      'Escritórios contábeis precisavam de uma solução simples e rápida para marcação de horários com foco em performance e experiência do desenvolvedor.',
+    solution:
+      'Construído em 3 horas com arquitetura enxuta: Next.js 16, TypeScript, Hono no backend e PostgreSQL. Deploy na Vercel com otimizações de performance.',
+    results: [
+      { metric: '3 horas', label: 'Tempo de desenvolvimento' },
+      { metric: 'DX/Performance', label: 'Arquitetura enxuta na Vercel' },
+    ],
+    links: {
+      website: 'https://agenda-facil-app.felipes.dev',
+      case: '/projetos/agenda-facil',
+    },
+    showPerformance: true,
+  },
 ];
 
 export default function CasesStack() {
