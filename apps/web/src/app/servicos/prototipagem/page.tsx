@@ -36,7 +36,7 @@ export default function PrototipagemPage() {
                   alt="Luis Felipe"
                   className="aspect-square size-full object-cover"
                   height={48}
-                  src="/me.png?v=20260923"
+                  src="/me.png"
                   width={48}
                 />
               </div>

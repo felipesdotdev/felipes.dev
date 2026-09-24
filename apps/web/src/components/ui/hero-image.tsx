@@ -11,7 +11,7 @@ export default function HeroImage() {
           priority
           quality={95}
           sizes="(max-width: 1024px) 100vw, 50vw"
-          src="/me.png?v=20260923"
+          src="/me.png"
         />
       </div>
     </div>
