@@ -7,6 +7,7 @@ import HeroSection from '@/components/ui/hero-section';
 import ProjectsSection from '@/components/ui/projects-section';
 import ServicesSection from '@/components/ui/services-section';
 import WhatsAppFloat from '@/components/ui/whatsapp-float';
+import { SiteFooter } from '@/components/site-footer';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CodeSection />
         <ContactSection />
       </div>
+      <SiteFooter />
       <WhatsAppFloat />
     </div>
   );

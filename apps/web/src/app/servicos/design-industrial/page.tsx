@@ -7,6 +7,8 @@ import { ServiceHeader } from '@/components/service-header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import TechnologyOrbit from '@/components/ui/technology-orbit';
+import { getWhatsAppUrl } from '@/lib/site-config';
 
 export default function DesignIndustrialPage() {
   return (
@@ -35,27 +37,21 @@ export default function DesignIndustrialPage() {
                   alt="Luis Felipe"
                   className="aspect-square size-full object-cover"
                   height={48}
-                  src="/me.png"
+                  src="/me.png?v=20260923"
                   width={48}
                 />
               </div>
               <div>
                 <p className="font-medium text-sm">Luis Felipe</p>
                 <p className="text-muted-foreground text-sm">
-                  Atualizado em Dez 07, 2024
+                  Soluções digitais para a indústria
                 </p>
               </div>
             </div>
           </div>
 
           <div className="mx-auto mt-12 max-w-6xl rounded-lg border p-2">
-            <Image
-              alt="Desenvolvimento Industrial"
-              className="aspect-video rounded-lg object-cover"
-              height={600}
-              src="/technologies.svg"
-              width={1200}
-            />
+            <TechnologyOrbit />
           </div>
 
           <div className="relative mx-auto mt-12 grid max-w-6xl gap-8 lg:grid-cols-4">
@@ -120,13 +116,9 @@ export default function DesignIndustrialPage() {
                   automação de processos, geração de leads qualificados e
                   otimização de operações complexas.
                 </p>
-                <Image
-                  alt="Desenvolvimento Industrial"
-                  className="my-8 aspect-video w-full rounded-md object-cover"
-                  height={400}
-                  src="/technologies.svg"
-                  width={800}
-                />
+                <div className="my-8 w-full overflow-hidden rounded-md">
+                  <TechnologyOrbit />
+                </div>
               </div>
 
               <section
@@ -194,9 +186,9 @@ export default function DesignIndustrialPage() {
                 <p>
                   Implementamos sistemas de automação que eliminam tarefas
                   repetitivas e
-                  <a className="text-primary hover:underline" href="#">
+                  <strong className="font-medium text-primary">
                     otimizam fluxos de trabalho
-                  </a>
+                  </strong>
                   , permitindo que sua equipe foque no que realmente importa.
                 </p>
                 <blockquote>
@@ -302,10 +294,10 @@ export default function DesignIndustrialPage() {
               </ul>
               <div className="flex flex-col gap-2">
                 <Button asChild>
-                  <Link href="/contato">Solicitar Consultoria</Link>
+                  <Link href={getWhatsAppUrl('Olá! Gostaria de conversar sobre uma solução digital para minha empresa.')} rel="noopener noreferrer" target="_blank">Solicitar Consultoria</Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link href="/projetos">Ver Cases Industriais</Link>
+                  <Link href="/#projects">Ver Cases Industriais</Link>
                 </Button>
               </div>
             </div>

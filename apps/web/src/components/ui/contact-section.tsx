@@ -4,6 +4,10 @@ import { Linkedin01 } from '../icons/linkedin-01';
 import { Mail01 } from '../icons/mail-01';
 import { Man } from '../icons/man';
 import { Whatsapp } from '../icons/whatsapp';
+import { getFormattedWhatsAppNumber, getWhatsAppUrl } from '@/lib/site-config';
+
+const contactLinkClass =
+  'group flex items-center gap-3 xs:gap-4 rounded-2xl border border-border/60 bg-secondary p-3 xs:p-4 shadow-[0_0_0_0.5px_rgba(0,0,0,0.18),inset_0_0_0_1px_rgba(255,255,255,0.035),inset_0_1px_0_rgba(255,255,255,0.04),0_1px_2px_rgba(0,0,0,0.12),0_3px_6px_rgba(0,0,0,0.07)] transition duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-[0_0_0_0.5px_rgba(0,0,0,0.2),inset_0_0_0_1px_rgba(255,255,255,0.045),inset_0_1px_0_rgba(255,255,255,0.05),0_2px_4px_rgba(0,0,0,0.14),0_8px_18px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary active:translate-y-0';
 
 export default function ContactSection() {
   return (
@@ -44,12 +48,12 @@ export default function ContactSection() {
             <div className="space-y-3 xs:space-y-4">
               {/* WhatsApp */}
               <Link
-                className="group hover:-translate-y-1 flex items-center gap-3 xs:gap-4 rounded-xl bg-gradient-to-b from-secondary to-secondary/20 p-3 xs:p-4 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)_inset] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
-                href="https://wa.me/5519993548926?text=Olá! Gostaria de conversar sobre desenvolvimento web."
+                className={contactLinkClass}
+                href={getWhatsAppUrl('Olá! Gostaria de conversar sobre desenvolvimento web.')}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <div className="flex h-10 xs:h-12 w-10 xs:w-12 items-center justify-center rounded-full bg-primary/20">
+                <div className="flex h-10 xs:h-12 w-10 xs:w-12 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
                   <Whatsapp className="h-5 xs:h-6 w-5 xs:w-6 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -57,18 +61,20 @@ export default function ContactSection() {
                     WhatsApp
                   </h4>
                   <p className="text-foreground/60 text-xs xs:text-sm">
-                    Resposta mais rápida
+                    {getFormattedWhatsAppNumber()}
                   </p>
                 </div>
-                <ArrowRight01 className="h-4 xs:h-5 w-4 xs:w-5 text-foreground/40 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-secondary/70 text-foreground/50 transition-colors group-hover:border-primary/30 group-hover:text-primary">
+                  <ArrowRight01 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </span>
               </Link>
 
               {/* Email */}
               <Link
-                className="group hover:-translate-y-1 flex items-center gap-3 xs:gap-4 rounded-xl bg-gradient-to-b from-secondary to-secondary/20 p-3 xs:p-4 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)_inset] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
+                className={contactLinkClass}
                 href="mailto:contato@felipes.dev?subject=Interesse em desenvolvimento web"
               >
-                <div className="flex h-10 xs:h-12 w-10 xs:w-12 items-center justify-center rounded-full bg-primary/20">
+                <div className="flex h-10 xs:h-12 w-10 xs:w-12 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
                   <Mail01 className="h-5 xs:h-6 w-5 xs:w-6 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -79,17 +85,19 @@ export default function ContactSection() {
                     luisfelipe.rs08x@gmail.com
                   </p>
                 </div>
-                <ArrowRight01 className="h-4 xs:h-5 w-4 xs:w-5 text-foreground/40 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-secondary/70 text-foreground/50 transition-colors group-hover:border-primary/30 group-hover:text-primary">
+                  <ArrowRight01 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </span>
               </Link>
 
               {/* LinkedIn */}
               <Link
-                className="group hover:-translate-y-1 flex items-center gap-3 xs:gap-4 rounded-xl bg-gradient-to-b from-secondary to-secondary/20 p-3 xs:p-4 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)_inset] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
+                className={contactLinkClass}
                 href="https://linkedin.com/in/felipesdev"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <div className="flex h-10 xs:h-12 w-10 xs:w-12 items-center justify-center rounded-full bg-primary/20">
+                <div className="flex h-10 xs:h-12 w-10 xs:w-12 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10">
                   <Linkedin01 className="h-5 xs:h-6 w-5 xs:w-6 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -100,7 +108,9 @@ export default function ContactSection() {
                     Vamos nos conectar
                   </p>
                 </div>
-                <ArrowRight01 className="h-4 xs:h-5 w-4 xs:w-5 text-foreground/40 transition-transform duration-300 group-hover:translate-x-1" />
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-secondary/70 text-foreground/50 transition-colors group-hover:border-primary/30 group-hover:text-primary">
+                  <ArrowRight01 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </span>
               </Link>
             </div>
           </div>
@@ -181,7 +191,7 @@ export default function ContactSection() {
 
               <Link
                 className="inline-flex items-center gap-2 xs:gap-3 rounded-full bg-primary px-4 xs:px-6 py-2.5 xs:py-3 font-semibold text-primary-foreground text-sm xs:text-base transition-all duration-300 hover:scale-105 hover:bg-primary/90"
-                href="https://wa.me/5519993548926?text=Olá! Vi seu portfólio e gostaria de conversar sobre um projeto."
+                href={getWhatsAppUrl('Olá! Vi seu portfólio e gostaria de conversar sobre um projeto.')}
                 rel="noopener noreferrer"
                 target="_blank"
               >

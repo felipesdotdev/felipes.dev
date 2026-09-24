@@ -1,11 +1,16 @@
+import DesignElement from './design-element';
+
 export default function HeroContent() {
   return (
-    <div className="relative">
-      <h1 className="font-bold text-4xl text-foreground xs:text-3xl leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[48px] xl:text-5xl">
-        <span className="mb-1 block">Desenvolvo</span>
-        <span className="mb-1 block text-primary">Sites de</span>
-        <span className="block text-primary">Alta Performance</span>
+    <div className="relative max-w-2xl">
+      <h1 className="font-semibold text-4xl text-foreground xs:text-3xl leading-[1.04] tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-[58px] xl:text-6xl">
+        <span className="block">Transformo ideias</span>
+        <span className="block">em <span className="relative inline-block text-primary">produtos<DesignElement /></span></span>
+        <span className="block text-primary">digitais melhores.</span>
       </h1>
+      <p className="mt-5 max-w-xl text-base text-muted-foreground leading-7 sm:text-lg">
+        Crio sites e sistemas rápidos, acessíveis e preparados para resolver problemas reais do negócio.
+      </p>
     </div>
   );
 }

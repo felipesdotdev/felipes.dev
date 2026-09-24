@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Tooltip,
@@ -11,6 +10,8 @@ import { Instagram } from '../icons/instagram';
 import { Linkedin01 } from '../icons/linkedin-01';
 import { QuoteUp } from '../icons/quote-up';
 import { Twitter } from '../icons/twitter';
+import TechnologyOrbit from './technology-orbit';
+import { getExperienceYears } from '@/lib/site-config';
 
 export default function ClientSection() {
   return (
@@ -19,7 +20,7 @@ export default function ClientSection() {
       id="about"
       style={{ opacity: 1, transform: 'none' }}
     >
-      <div className="grid grid-cols-1 gap-4 xs:gap-6 lg:grid-cols-3 lg:gap-8">
+      <div className="grid grid-cols-1 gap-4 xs:gap-6 lg:grid-cols-3 lg:gap-5">
         <div className="rounded-2xl bg-secondary p-4 xs:p-6 sm:p-8 lg:col-span-1">
           <h3 className="mb-4 font-medium text-2xl text-foreground sm:text-3xl">
             O que os clientes dizem
@@ -53,14 +54,7 @@ export default function ClientSection() {
           <h3 className="relative z-10 p-4 xs:p-6 font-medium text-2xl text-muted-foreground/30 sm:p-8 sm:text-3xl">
             Tecnologias que utilizo
           </h3>
-          <Image
-            alt="Software Tools"
-            className="h-auto w-full"
-            height={240}
-            src="/technologies.svg"
-            style={{ color: 'transparent' }}
-            width={420}
-          />
+          <TechnologyOrbit />
         </div>
 
         <div className="flex flex-col justify-between space-y-6 lg:col-span-1 lg:space-y-0">
@@ -127,7 +121,7 @@ export default function ClientSection() {
           <div className="relative overflow-hidden rounded-2xl bg-secondary p-4 xs:p-6 sm:p-8">
             <div className="-bottom-10 absolute right-0 h-16 w-1/2 bg-primary/20 blur-2xl" />
             <h2 className="font-medium text-6xl text-foreground leading-tight sm:text-7xl md:text-[100px]">
-              5+
+              {getExperienceYears()}+
             </h2>
             <div className="mt-2 border-button-1 border-l-2 pl-4">
               <p className="font-medium text-base text-foreground leading-6">

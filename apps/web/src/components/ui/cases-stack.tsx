@@ -5,7 +5,6 @@ import { Autoplay, EffectCards, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ArrowRight01 } from '../icons/arrow-right-01';
 import { CheckList } from '../icons/check-list';
-import { Link01 } from '../icons/link-01';
 import { Rocket } from '../icons/rocket';
 import { ServerStack01 } from '../icons/server-stack-01';
 import { Tick01 } from '../icons/tick-01';
@@ -28,10 +27,6 @@ const cases = [
     solution:
       'Desenvolvimento completo de um novo site responsivo com foco em conversão, otimização SEO avançada e integração com ferramentas de análise de performance.',
     results: [{ metric: '+150%', label: 'Aumento em Conversões' }],
-    links: {
-      website: 'https://petroend.com.br',
-      case: '/projetos/petroend',
-    },
     showPerformance: true,
   },
   {
@@ -46,10 +41,6 @@ const cases = [
       { metric: '100%', label: 'Desenvolvido Solo' },
       { metric: 'Full-Stack', label: 'IA + Backend + Frontend' },
     ],
-    links: {
-      website: 'https://v2.invoicce.io',
-      case: '/projetos/invoicce',
-    },
     showPerformance: false,
     features: [
       'Sistema de IA conversacional para ligações',
@@ -74,10 +65,6 @@ const cases = [
       { metric: 'Segurança', label: 'Proteção antipirataria' },
       { metric: 'Integrações', label: 'Asaas, Pix, Webhooks' },
     ],
-    links: {
-      website: 'https://fantazy.com.br',
-      case: '/projetos/fantazy',
-    },
     showPerformance: false,
   },
   {
@@ -93,10 +80,6 @@ const cases = [
       { metric: '3 horas', label: 'Tempo de desenvolvimento' },
       { metric: 'DX/Performance', label: 'Arquitetura enxuta na Vercel' },
     ],
-    links: {
-      website: 'https://agenda-facil-app.felipes.dev',
-      case: '/projetos/agenda-facil',
-    },
     showPerformance: true,
   },
 ];
@@ -206,20 +189,11 @@ export default function CasesStack() {
                   {/* Botões */}
                   <div className="flex xs:flex-row flex-col gap-3 xs:gap-4">
                     <Link
-                      className="flex items-center justify-center gap-2 rounded-lg bg-primary px-4 xs:px-6 py-2.5 xs:py-3 font-semibold text-primary-foreground text-sm xs:text-base transition-all duration-300 hover:bg-primary/90"
-                      href={caseItem.links.website}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <Link01 className="h-4 w-4" />
-                      Ver Site
-                    </Link>
-                    <Link
                       className="flex items-center justify-center gap-2 rounded-lg border border-foreground/20 px-4 xs:px-6 py-2.5 xs:py-3 font-semibold text-foreground text-sm xs:text-base transition-all duration-300 hover:bg-secondary"
-                      href={caseItem.links.case}
+                      href="/#contact"
                     >
                       <ArrowRight01 className="h-4 w-4" />
-                      Ver Case Completo
+                      Conversar sobre projeto
                     </Link>
                   </div>
                 </div>

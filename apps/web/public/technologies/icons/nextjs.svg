@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="178 105 64 64" width="64" height="64" fill="none"><defs><linearGradient id="paint0_linear_94_156" x1="213.378" y1="141.711" x2="219.689" y2="149.533" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0" />
+</linearGradient>
+<linearGradient id="paint1_linear_94_156" x1="215.511" y1="130.6" x2="215.476" y2="140" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" />
+<stop offset="1" stop-color="white" stop-opacity="0" />
+</linearGradient>
+<clipPath id="clip3_94_156">
+<rect width="32" height="32" fill="white" transform="translate(194 121)" />
+</clipPath>
+</defs><g><circle cx="210" cy="137" r="32" fill="#1F1F1F" />
+<g clip-path="url(#clip3_94_156)">
+<mask id="mask1_94_156" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="194" y="121" width="32" height="32">
+<path d="M210 153C218.837 153 226 145.837 226 137C226 128.163 218.837 121 210 121C201.163 121 194 128.163 194 137C194 145.837 201.163 153 210 153Z" fill="black" />
+</mask>
+<g mask="url(#mask1_94_156)">
+<path d="M210 152.467C218.542 152.467 225.467 145.542 225.467 137C225.467 128.458 218.542 121.533 210 121.533C201.458 121.533 194.533 128.458 194.533 137C194.533 145.542 201.458 152.467 210 152.467Z" fill="black" fill-opacity="0.5" stroke="white" stroke-opacity="0.5" stroke-width="6" />
+<path d="M220.579 149.003L206.292 130.6H203.6V143.394H205.754V133.334L218.889 150.305C219.482 149.909 220.046 149.473 220.579 149.003Z" fill="url(#paint0_linear_94_156)" fill-opacity="0.5" />
+<path d="M216.578 130.6H214.445V143.4H216.578V130.6Z" fill="url(#paint1_linear_94_156)" fill-opacity="0.5" />
+</g>
+</g>
+</g></svg>

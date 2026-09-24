@@ -29,7 +29,7 @@ export default function ServicesSection() {
           <h3 className="mb-6 font-medium text-2xl text-foreground sm:text-3xl">
             Estratégia e Consultoria Digital
           </h3>
-          <p className="mb-6 font-normal text-base text-foreground/30 leading-6">
+          <p className="mb-6 font-normal text-base text-muted-foreground leading-6">
             Análise completa do seu negócio para criar uma estratégia digital
             que aumenta vendas e melhora a experiência dos seus clientes.
           </p>
@@ -50,7 +50,7 @@ export default function ServicesSection() {
           <h3 className="mb-6 font-medium text-2xl text-foreground sm:text-3xl">
             Design de Interface e UX
           </h3>
-          <p className="mb-6 font-normal text-base text-foreground/30 leading-6">
+          <p className="mb-6 font-normal text-base text-muted-foreground leading-6">
             Criação de interfaces intuitivas e experiências que convertem
             visitantes em clientes, aumentando suas vendas online.
           </p>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
           <h3 className="mb-6 font-medium text-2xl text-foreground sm:text-3xl">
             Desenvolvimento para Indústria
           </h3>
-          <p className="mb-6 font-normal text-base text-foreground/30 leading-6">
+          <p className="mb-6 font-normal text-base text-muted-foreground leading-6">
             Sites e sistemas especializados para empresas industriais, com foco
             em geração de leads qualificados e automação de processos.
           </p>

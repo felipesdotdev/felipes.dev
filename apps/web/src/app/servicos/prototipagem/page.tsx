@@ -7,6 +7,8 @@ import { ServiceHeader } from '@/components/service-header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import TechnologyOrbit from '@/components/ui/technology-orbit';
+import { getWhatsAppUrl } from '@/lib/site-config';
 
 export default function PrototipagemPage() {
   return (
@@ -34,27 +36,21 @@ export default function PrototipagemPage() {
                   alt="Luis Felipe"
                   className="aspect-square size-full object-cover"
                   height={48}
-                  src="/me.png"
+                  src="/me.png?v=20260923"
                   width={48}
                 />
               </div>
               <div>
                 <p className="font-medium text-sm">Luis Felipe</p>
                 <p className="text-muted-foreground text-sm">
-                  Atualizado em Dez 07, 2024
+                  Design de produto e experiência
                 </p>
               </div>
             </div>
           </div>
 
           <div className="mx-auto mt-12 max-w-6xl rounded-lg border p-2">
-            <Image
-              alt="Design e UX"
-              className="aspect-video rounded-lg object-cover"
-              height={600}
-              src="/technologies.svg"
-              width={1200}
-            />
+            <TechnologyOrbit />
           </div>
 
           <div className="relative mx-auto mt-12 grid max-w-6xl gap-8 lg:grid-cols-4">
@@ -119,13 +115,9 @@ export default function PrototipagemPage() {
                   combina design thinking, pesquisa de usuário e tecnologia
                   moderna para criar soluções que realmente funcionam.
                 </p>
-                <Image
-                  alt="Design e UX"
-                  className="my-8 aspect-video w-full rounded-md object-cover"
-                  height={400}
-                  src="/technologies.svg"
-                  width={800}
-                />
+                <div className="my-8 w-full overflow-hidden rounded-md">
+                  <TechnologyOrbit />
+                </div>
               </div>
 
               <section className="prose dark:prose-invert mb-8" id="processo">
@@ -190,9 +182,9 @@ export default function PrototipagemPage() {
                 <p>
                   Desenvolvemos um sistema de design completo que garante
                   consistência visual e
-                  <a className="text-primary hover:underline" href="#">
+                  <strong className="font-medium text-primary">
                     experiência coesa
-                  </a>{' '}
+                  </strong>{' '}
                   em toda a plataforma.
                 </p>
                 <blockquote>
@@ -299,10 +291,10 @@ export default function PrototipagemPage() {
               </ul>
               <div className="flex flex-col gap-2">
                 <Button asChild>
-                  <Link href="/contato">Solicitar Orçamento</Link>
+                  <Link href={getWhatsAppUrl('Olá! Gostaria de conversar sobre design de interface e UX.')} rel="noopener noreferrer" target="_blank">Solicitar Orçamento</Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link href="/projetos">Ver Portfólio</Link>
+                  <Link href="/#projects">Ver Portfólio</Link>
                 </Button>
               </div>
             </div>

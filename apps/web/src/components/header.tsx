@@ -25,20 +25,21 @@ export const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <header>
       <nav
-        className="fixed z-20 w-full px-2"
+        className="fixed top-4 z-20 w-full px-2"
         data-state={menuState && 'active'}
       >
         <div
           className={cn(
-            'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12',
+            'mx-auto mt-0 max-w-6xl border border-transparent px-4 transition-[max-width,padding,background-color,border-color,box-shadow] duration-300 sm:px-6 lg:px-10',
             isScrolled &&
-              'max-w-4xl rounded-2xl border bg-background/50 backdrop-blur-lg lg:px-5'
+              'max-w-4xl rounded-2xl border-border/70 bg-background/85 shadow-lg shadow-black/10 backdrop-blur-xl lg:px-5'
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -101,27 +102,33 @@ export const Header = () => {
                 <Button
                   asChild
                   className={cn(
-                    'rounded-full bg-gradient-to-r from-primary to-primary/80 shadow-lg transition-all duration-300 hover:scale-105 hover:from-primary/90 hover:to-primary/70 hover:shadow-xl',
-                    isScrolled && 'lg:hidden'
+                    'rounded-full bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:shadow-md active:scale-[0.97] lg:w-[170px]',
+                    isScrolled && 'lg:w-[126px]'
                   )}
                   size="sm"
                 >
-                  <Link className="flex items-center gap-2" href="#contact">
+                  <Link
+                    aria-label="Ir para contato"
+                    className="header-cta flex items-center gap-2 overflow-hidden"
+                    data-scrolled={isScrolled}
+                    href="#contact"
+                    onClick={() => setMenuState(false)}
+                  >
                     <Whatsapp className="h-4 w-4" />
-                    <span>Vamos Conversar</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  className={cn(
-                    'rounded-full transition-all duration-300',
-                    isScrolled ? 'lg:inline-flex' : 'hidden'
-                  )}
-                  size="sm"
-                >
-                  <Link className="flex items-center gap-2" href="#contact">
-                    <Whatsapp className="h-4 w-4" />
-                    <span>Contato</span>
+                    <span aria-hidden="true" className="lg:hidden">
+                      Vamos Conversar
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="header-cta-copy hidden lg:block"
+                    >
+                      <span className="header-cta-label header-cta-label-full">
+                        Vamos Conversar
+                      </span>
+                      <span className="header-cta-label header-cta-label-short">
+                        Contato
+                      </span>
+                    </span>
                   </Link>
                 </Button>
               </div>
